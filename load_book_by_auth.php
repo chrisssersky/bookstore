@@ -1,6 +1,9 @@
 <?php
+session_start();
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 if($_POST['author'])
 {
+$bookauth = 1;
 $author_id = $_POST['author'];
 include"db.php";
 
@@ -45,12 +48,18 @@ $msg .=
       </div>
       <div class="col-md-12">
          <div class="row">
-            <div class="rating">' . $row['avg_rating'] . '</div>
+            <div id="bookauth'.$bookauth++.'" value="'. $row['avg_rating'] .'" class="rating"></div>
          </div>
       </div>
       <div class="col-md-12">
-         <div class="row">
-            <div class="add_purchase"> Dodaj do koszyka <i class="fa fa-shopping-cart"></i></div>
+         <div class="row">';
+		 if ($_SESSION['auth'] == true && $_SESSION['login']== true) {
+			$msg .='<button value="' . $row['book_id'] . '" class="add_purchase"> Dodaj do koszyka <i class="fa fa-shopping-cart"></i></button>';
+		 }
+		 else { 
+			$msg .='<button class="add_purchase disabled" data-placement="right" data-toggle="tooltip" title="Musisz być zalogowany!"> Dodaj do koszyka <i class="fa fa-shopping-cart"></i></button>';
+		 }; 	 
+		 $msg .='
          </div>
       </div>
       <div class="col-md-12">

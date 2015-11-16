@@ -14,7 +14,12 @@
       <link href="style.css" rel="stylesheet">
       <script src="jquery-1.11.1.min.js"></script>
       <script src="bootstrap/js/bootstrap.min.js"></script>
-      <script src="bootstrap-rating.js"></script>
+      <!--<script src="bootstrap-rating.js"></script> -->
+	  <script type="text/javascript" src="datepicker/bootstrap-datepicker.js"></script>
+	 <script type="text/javascript" src="datepicker/bootstrap-datepickerpl.js" charset="UTF-8"></script>
+	 <script type="text/javascript" src="ratings/jquery.raty.js"></script>
+	  <link rel="stylesheet" href="ratings/jquery.raty.css">
+	<link rel="stylesheet" href="datepicker/datepicker3.css">
       <script src="jquery-validate.js"></script>
       <script src="app.js"></script>
       <link href="miso/stylesheet.css" rel="stylesheet">
@@ -29,14 +34,14 @@
       <div class="container main_box_head">
          <div class="row">
             <div class="col-md-6" style="padding-top:5px;">
-               <span class="name_italic">Największy wybór e-booków w sieci! 
+               <span class="name_italic">Największy wybór książek w sieci! 
                <?php if ($_SESSION['login'] == true) {
                   ?>Witaj <b><?php echo $_SESSION['login'] ?></b>.</span> <?php } else {?>
                Zostań naszym użytkownikiem.
                <?php } ?>
             </div>
             <div class="col-md-2">
-               <?php if ($_SESSION['auth'] == true) {
+               <?php if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
                   ?> <button  id="logout" class="login-btn">Wyloguj <span class="glyphicon glyphicon-log-out"></span></button> <?php
                   } else {?>
                <button class="login-btn" type="button" data-toggle="modal" data-target="#myLogin">
@@ -67,9 +72,13 @@
                </div>
             </div>
             <div class="col-md-2">
-               <button id="add_user_main_btn" class="regiser-btn" type="button" data-toggle="modal" data-target="#myRegister">
+                <?php if ($_SESSION['auth'] == true && $_SESSION['login']== true) { ?> 
+				<button id="add_user_main_btn" class="regiser-btn disabled" type="button">
+               Rejestracja <span class="caret"></span></button>
+				<?php } else { ?>
+			   <button id="add_user_main_btn" class="regiser-btn" type="button" data-toggle="modal" data-target="#myRegister">
                Rejestracja <span class="caret"></span>
-               </button>
+				</button> <?php } ?>
                <div class="modal fade" id="myRegister" tabindex="-1" role="dialog" aria-labelledby="myRegister">
                   <div class="modal-dialog" role="document">
                      <div class="modal-content">
@@ -116,18 +125,19 @@
                </div>
             </div>
             <div class="col-md-2">
-               <button class="contact-btn" type="button">
-               <a href="contact">Kontakt  &nbsp;<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
-               </button>
+               <a href="contact"><button class="contact-btn" type="button">
+               Kontakt  &nbsp;<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+               </button></a>
             </div>
          </div>
       </div>
       <div class="container main_box_logo">
          <div class="row">
             <div class="col-md-6">
-               <img src="logo.png" alt=""/>
+               <img src="logo.png" class="img-responsive"alt=""/>
             </div>
             <div class="col-md-6">
+			... <?php echo $_POST['purchase']; ?>
             </div>
          </div>
       </div>
@@ -228,7 +238,7 @@
             <div class="col-md-8">
                <div class="new_ones">
                   <h1>Zarządzaj kontem</h1>
-                  fdgdf
+                  <div class="makespace"></div>
                </div>
             </div>
          </div>
@@ -236,32 +246,81 @@
       <?php  break;
          case 'shop':
            ?>
-		   <div class="container">
-		   <br><br><br><br><br><br>
-		   WORK IN PROGRESS!
-		   <br><br><br><br><br><br>
-		   </div>
+		   <div class="container main_box_1">
+         <div class="row">
+            <div class="col-md-8">
+               <div class="new_ones">
+                  <h1>Twój koszyk</h1>
+ 				<div id="load_shop_card"></div> 
+               </div>
+			      <div class="new_ones">
+                  <h1>Zakupione produkty</h1>
+ 				<div id=""></div> 
+               </div>
+            </div>
+			<div class="col-md-4">
+               <div class="bestseller">
+                  <h2>Informacje</h2>
+				  <div class="shop_card_info">
+				  Użytkownik może edytować listę produktów w koszyku, zmieniać ilość zamawianych egzemplarzy, usuwać z listy. Cena zamówienia zostanie obliczona automatycznie po wprowadzonych zmianach.<br/><br/>
+				  
+				  Naszym Klientom oferujemy następujące możliwości dostawy i zapłaty:
+				  <ul>				  
+				  <li>Kurier, płatność przelewem lub kartą.</li>
+				  <li>Kurier, płatność przy odbiorze.</li>
+				  <li>Paczkomaty InPost, odbiór osobisty, płatność przelewem lub kartą.</li>
+				  <li>Poczta Polska, dostawa do domu, płatność przelewem lub kartą.</li>
+				  </ul>
+				  
+				  Po zakupieniu produktów w naszym sklepie, prosimy o wystawienie oceny oraz dodanie własnej recenzji. <br/></br>
+				  <strong>Masz pytania?</strong></br>
+				  Nasi doświadczeni pracownicy chętnie Ci pomogą.</br></br>
+
+				  Infolinia: <span class="single_contact_info"> +48 123 456 789</span>
+				  
+				  </div>
+				  </div>
+            </div>       
+         </div>
+      </div>
 		   <?php
            break;
          
            case 'home':
-               include 'home.php';
+               ?>
+			   <div class="container main_box_1">
+         <div class="row">
+            <div class="col-md-8">
+               <div class="new_ones">
+                  <h1>Nowości</h1>
+ 				<div id="load_new_ones"></div>  
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="bestseller">
+                  <h2>Bestsellery</h2>
+				  <div id="load_bestsellers"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+	  <?php
            break;
          }
          ?>
       <div class="container footer">
          <div class="row">
             <div class="col-md-3">
-               BookStore - Największy wybór e-booków w sieci! <br/>
+               BookStore - Największy wybór książek w sieci! <br/><br/>
                Projekt i realizacja:<br/>
                <a href="#">Krzysztof Serafin</a>
             </div>
             <div class="col-md-3 footer-box">
                <ul class="footer_list">
-               <li><a href="bookstore">Strona główna</a></li>
+               <li><a href="/bookstore">Strona główna</a></li>
                <li><a href="books">Dostępne książki</a></li>
                <li><a href="account">Twoje konto</a></li>
-               <li><a href="#">Twój koszyk</a></li>
+               <li><a href="shop">Twój koszyk</a></li>
 			   </ul>
             </div>
             <div class="col-md-3 footer-box">

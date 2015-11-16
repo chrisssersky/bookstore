@@ -15,11 +15,11 @@ echo '<li>
           <span>Książki</span>
         </a>
       </li>';
-if ($_SESSION['auth'] == true) {
-    echo '<li>
+if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
+    echo '<li id="nav_shopcard">
        <a ' . ($page == 'shop' ? 'class="selected"' : '') . ' href="shop">
           <i class="fa fa-2x fa-shopping-cart"></i> 
-          <span>Koszyk</span>
+          <span>Koszyk</span> <div id="show_num_addcard" class="show_num_addcard"></div>
         </a>
 </li>';
 } else {
@@ -30,7 +30,7 @@ if ($_SESSION['auth'] == true) {
         </a>
 </li>';
 }
-if ($_SESSION['auth'] == true) {
+if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
     echo '<li>
         <a ' . ($page == 'account' ? 'class="selected"' : '') . ' href="account">
           <i class="fa fa-2x fa-cog"></i> 

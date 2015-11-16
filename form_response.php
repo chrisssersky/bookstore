@@ -58,13 +58,14 @@
   $result = mysql_query($sql);
   
   if($result1)
-  { mysql_close();
-  $result = mysql_query($sql);
-  echo json_encode($json);
+  { 
+	mysql_close();
+	$result = mysql_query($sql);
+	echo json_encode($json);
   }
   else
   {
-  echo("Something went wrong...");
+	echo("Something went wrong...");
   }
   
   mysql_close();

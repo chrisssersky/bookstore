@@ -1,5 +1,8 @@
 <?php
+session_start();
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 if ($_POST['page']) {
+	$booknum = 1;
     $page     = $_POST['page'];
     $cur_page = $page;
     $page -= 1;
@@ -19,10 +22,10 @@ if ($_POST['page']) {
     while ($row = mysql_fetch_array($result_pag_data)) {
         $msg .= '<div class="col-md-12 book_display">
 <div class="row">
-   <div class="col-md-6 book_content1">
+   <div class="col-md-5 book_content1">
       <h3>' . $row['title'] . '</h3>
    </div>
-   <div class="col-md-6 book_content2">
+   <div class="col-md-7 book_content2">
       <div class="autor_category"> <a class="author_info" value="' . $row['author_id'] . '">' . $row['first_name'] . ' ' . $row['last_name'] . '</a> | Data wydania: ' . $row['create_date'] . ' | Kategoria: <a class="cat_info sort_book" value="' . $row['category_id'] . '">' . $row['name'] . '</a></div>
    </div>
 </div>
@@ -42,12 +45,18 @@ if ($_POST['page']) {
       </div>
       <div class="col-md-12">
          <div class="row">
-            <div class="rating">' . $row['avg_rating'] . '</div>
+            <div id="loadbook'.$booknum++.'" value="'. $row['avg_rating'] .'" class="rating"></div>
          </div>
       </div>
       <div class="col-md-12">
-         <div class="row">
-            <div class="add_purchase"> Dodaj do koszyka <i class="fa fa-shopping-cart"></i></div>
+         <div class="row">';
+		 if ($_SESSION['auth'] == true && $_SESSION['login']== true) {
+			$msg .='<button value="' . $row['book_id'] . '" class="add_purchase"> Dodaj do koszyka <i class="fa fa-shopping-cart"></i></button>';
+		 }
+		 else { 
+			$msg .='<button class="add_purchase disabled" data-placement="right" data-toggle="tooltip" title="Musisz być zalogowany!"> Dodaj do koszyka <i class="fa fa-shopping-cart"></i></button>';
+		 }; 	 
+		 $msg .='
          </div>
       </div>
       <div class="col-md-12">
