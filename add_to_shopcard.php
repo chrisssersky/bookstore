@@ -4,7 +4,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 include('db.php');
 if ($_POST['book_id']) {
     $book_id = $_POST['book_id'];
-    if ($_SESSION['auth'] = true && $_SESSION['login'] == true) {
+    if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
         $numer_id  = mysql_query("select purchase_id from purchase order by purchase_id desc");
         $row       = mysql_fetch_row($numer_id);
         $numer     = $row[0] + 1;
@@ -18,4 +18,3 @@ if ($_POST['book_id']) {
         }
     }
 }
-?>

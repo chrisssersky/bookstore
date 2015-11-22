@@ -1,4 +1,5 @@
 <?php
+
 if (!isset($_GET['p'])) {
     $_GET['p'] = 'home';
 }
@@ -23,8 +24,8 @@ if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
         </a>
 </li>';
 } else {
-    echo '<li class="disabled">
-       <a ' . ($page == 'naszeprace' ? 'class="selected"' : '') . '>
+    echo '<li class="disabled"  >
+       <a ' . ($page == 'naszeprace' ? 'class="selected"' : '') . ' >
           <i class="fa fa-2x fa-shopping-cart"></i> 
           <span>Koszyk</span>
         </a>

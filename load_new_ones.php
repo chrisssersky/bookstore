@@ -1,6 +1,7 @@
 <?php
+
 session_start();
-error_reporting( E_ALL & ~E_NOTICE & ~E_DEPRECATED );
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 include "db.php";
 $newbook = 1;
 mysql_query("SET NAMES 'utf8'");
@@ -17,17 +18,18 @@ while ($row = mysql_fetch_array($result_pag_data)) {
       <div class="col-md-8 book_content3">
          <h5>' . $row['title'] . '</h5>
          ' . $row['first_name'] . ' ' . $row['last_name'] . '<br/><br/>
-         <div id="newbook'. $newbook++ .'" value="'. $row['avg_rating'] .'" class="rating1"></div>
+         <div id="newbook' . $newbook++ . '" value="' . $row['avg_rating'] . '" class="rating1"></div>
          <div class="row">
             <div class="col-md-6 best_single_price">
                <span class="single_price_best">' . $row['price'] . ' zł</span>
             </div>
-            <div class="col-md-6">';
-			if ($_SESSION['auth'] == true && $_SESSION['login']== true) {
-			$msg .= '<button value="' . $row['book_id'] . '" class="add_purchase">Koszyk <i class="fa fa-shopping-cart"></i> </button>';
-			} else {
-			$msg .= '<button class="add_purchase" data-placement="bottom" data-toggle="tooltip" title="Musisz być zalogowany!">Koszyk <i class="fa fa-shopping-cart"></i> </button>'; }
-			 $msg .='
+            <div id="purchase-buttons" class="col-md-6">';
+    if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
+        $msg .= '<button value="' . $row['book_id'] . '" class="add_purchase">Koszyk <i class="fa fa-shopping-cart"></i> </button>';
+    } else {
+        $msg .= '<button class="add_purchase" data-placement="bottom" data-toggle="tooltip" title="Musisz być zalogowany!">Koszyk <i class="fa fa-shopping-cart"></i> </button>';
+    }
+    $msg .='
     
             </div>
          </div>

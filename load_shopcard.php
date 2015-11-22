@@ -1,9 +1,10 @@
 <?php
+
 session_start();
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
-if ($_SESSION['auth'] = true && $_SESSION['login'] == true) {
+if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
     $num_rows = 1;
-    $price    = 0;
+    $price = 0;
     $_SESSION['login'];
     $user_id = $_SESSION['user_id'];
     include "db.php";
@@ -27,7 +28,7 @@ if ($_SESSION['auth'] = true && $_SESSION['login'] == true) {
        ';
         while ($row = mysql_fetch_array($result_pag_data)) {
             $msg .= ' 
-          <tr id="item' . $row['purchase'] . '">
+          <tr id="item' . $row['purchase'] . '" class="multiple" value="' . $row['book_id'] . '">
 		  <th id="auto_num">' . $num_rows++ . '</th>
           <td><img src="images/covers/' . $row['book_id'] . '.jpg" class="img-responsive book_cover small_cover"></td>
           <td>' . $row['title'] . '</td>
@@ -42,11 +43,11 @@ if ($_SESSION['auth'] = true && $_SESSION['login'] == true) {
 			</tbody>	
 			</table>
 			
-		<div class="row">
+		<div id="price_block" class="row">
 			<div class="col-md-6 show_price_shopcard">
 				Całkowity koszt zamówienia: <span id="price_shopcard">' . $price . '</span> zł</div>
 			<div class="col-md-6">
-				<input type="submit" class="btn-form btn-form-full" name="submit" value="Zapłać i zrealizuj zamówienie"/>
+				<input id="paycard" type="submit" class="btn-form btn-form-full" name="submit" value="Zapłać i zrealizuj zamówienie"/>
 			</div>
 		</div></br></br>';
     } else {
@@ -56,6 +57,9 @@ if ($_SESSION['auth'] = true && $_SESSION['login'] == true) {
 		</div>';
     }
 } else {
-    $msg = 'Musisz być zalogowany.';
+    $msg = '<div class="nothing_here">
+			<i class="fa fa-exclamation-triangle"></i> Musić być zalogowany. <br/> 
+                        Zaloguj się lub załóż konto!
+		</div>';
 }
 echo $msg;

@@ -1,9 +1,9 @@
 <?php
 if ($cur_page >= 7) {
     $start_loop = $cur_page - 3;
-    if ($no_of_paginations > $cur_page + 3)
+    if ($no_of_paginations > $cur_page + 3) {
         $end_loop = $cur_page + 3;
-    else if ($cur_page <= $no_of_paginations && $cur_page > $no_of_paginations - 6) {
+    } else if ($cur_page <= $no_of_paginations && $cur_page > $no_of_paginations - 6) {
         $start_loop = $no_of_paginations - 6;
         $end_loop = $no_of_paginations;
     } else {
@@ -11,10 +11,11 @@ if ($cur_page >= 7) {
     }
 } else {
     $start_loop = 1;
-    if ($no_of_paginations > 7)
+    if ($no_of_paginations > 7) {
         $end_loop = 7;
-    else
+    } else {
         $end_loop = $no_of_paginations;
+    }
 }
 $msg .= "<div class='pagination'><ul>";
 
@@ -34,10 +35,11 @@ if ($previous_btn && $cur_page > 1) {
 }
 for ($i = $start_loop; $i <= $end_loop; $i++) {
 
-    if ($cur_page == $i)
+    if ($cur_page == $i) {
         $msg .= "<li p='$i' style='color:#fff;background-color:#D70051; border: 1px solid #C00048;' class='active'>{$i}</li>";
-    else
+    } else {
         $msg .= "<li p='$i' class='active'>{$i}</li>";
+    }
 }
 
 // Uaktywnienie następnego buttona
