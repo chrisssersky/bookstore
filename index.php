@@ -141,14 +141,14 @@ error_reporting(E_ALL & ~E_NOTICE);
                     <img src="logo1.png" class="img-responsive" alt=""/>
                 </div>
                 <div class="col-md-6">
-                    ...
+
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row book_mark">
                 <div class="col-md-8 search_form">
-                    <?php if($_GET['p'] == 'books' OR $_GET['p'] == 'home' ) { ?>
+                    <?php if ($_GET['p'] == 'books' OR $_GET['p'] == 'home') { ?>
                         <form action="load_book_by_type.php" method="post" id="type_word">
                             <div class="input-group">
                                 <input type="text" class="form-control form_green" placeholder="Podaj nazwę książki, imię lub nazwisko autora.." name="word" id="word">

@@ -5,7 +5,6 @@ include('db.php');
 if ($_POST['finalbooks']) {
     if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
       $book_id=$_POST['finalbooks'];
-      $user_id=$_SESSION['user_id'];
     
         $numer_id  = mysql_query("SELECT final_purchase_id FROM final_purchase order by final_purchase_id desc");
         $row       = mysql_fetch_row($numer_id);

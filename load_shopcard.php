@@ -13,7 +13,9 @@ if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
     $query_pag_data = "SELECT b.purchase_id as purchase, p.book_id, k.title, k.price, p.purchase_id, p.quantity, b.user_id, b.purchase_status_id, s.name FROM book k, purchase_status s, purchase b INNER JOIN purchase_item p ON b.purchase_id = p.purchase_id and b.user_id='$user_id' where s.status_id=b.purchase_status_id and p.book_id=k.book_id";
     $result_pag_data = mysql_query($query_pag_data) or die('Database error' . mysql_error());
     if (mysql_num_rows($result_pag_data) > 0) {
-        $msg = '<table class="table table-striped responsive">
+        
+        $msg = '<div class="table-responsive">
+            <table class="table table-striped">
 	<thead>
         <tr>
           <th>#</th>
@@ -30,7 +32,7 @@ if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
             $msg .= ' 
           <tr id="item' . $row['purchase'] . '" class="multiple" value="' . $row['book_id'] . '">
 		  <th id="auto_num">' . $num_rows++ . '</th>
-          <td><img src="images/covers/' . $row['book_id'] . '.jpg" class="img-responsive book_cover small_cover"></td>
+          <td><img src="images/covers/' . $row['book_id'] . '.jpg" class="book_cover small_cover"></td>
           <td>' . $row['title'] . '</td>
           <td id="quantity:' . $row['purchase_id'] . '" contenteditable="true">' . $row['quantity'] . '</td>
 		  <td>' . $row['price'] . ' zł </td>
@@ -42,7 +44,7 @@ if ($_SESSION['auth'] == true && $_SESSION['login'] == true) {
 			</tr>
 			</tbody>	
 			</table>
-			
+			</div>
 		<div id="price_block" class="row">
 			<div class="col-md-6 show_price_shopcard">
 				Całkowity koszt zamówienia: <span id="price_shopcard">' . $price . '</span> zł</div>

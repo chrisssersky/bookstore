@@ -112,7 +112,7 @@ $(document).on('click', ".delete_link_final", function ()
                     $('#itemfinal' + purchase + '').fadeOut(400, function ()
                     {
                         $(this).remove();
-
+                        $('#rating_panel'+ purchase).remove();    
                     });
                 }
             });
@@ -258,7 +258,8 @@ $(document).on('click', ".add_rev_rat", function ()
 {
     book_id = $(this).attr("value");
     console.log(book_id);
-    $('#rating_panel' + book_id).slideToggle("fast");
+    $('#rating_panel' + book_id).slideToggle("fast", function() {
+     });
 });
 // Wyświetlanie gifa ładowania
 

@@ -829,14 +829,161 @@ body {
     letter-spacing: -1px;
 }
 
+@media (min-width: 768px) {
+    .delete_link_final {
+        position: static;
+    }
+}
+
+
 @media(max-width: 768px) {
+    
+    .final_book_box1 {
+     font-size: 14px;   
+    }
+    
+    .delete_link_final {
+        position: absolute;
+        margin-top: -150px;
+        margin-left:250px;
+    }
+    
+    .add_rev_rat {
+    width: 100%;
+    background: #EEEEEE;
+    font-size: 13px;
+    margin-top: 10px;
+    
+}
+
+    .book_content2 {
+        padding: 2px;
+        text-align: left;
+        text-shadow: 1px 1px #fff;
+    }
+
+    .num_best {
+        font-size: 15px;
+    }
+
+    .book_single_best {
+        border-bottom: 1px dashed #dedede;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .rating1 {
+        background: #fff;
+        border: 0px;
+        padding: 5px;
+        padding-top: 0px;
+        margin-bottom: 2px;
+    }
+
+    .book_cover_new{
+        height: 115px;
+        float: left;
+        z-index: 1000;
+        position: relative;
+        background: #fff;
+    }
+    .book_single_new {
+        width: auto;
+        margin: 0px;
+        margin-bottom: 3px;
+        border: 3px solid #dedede;
+        padding-top:15px;
+        padding: 0px;
+
+    }
+
+    .makespace {
+        height: auto;
+    }
+
+    #book .pagination {
+        margin-bottom: 0px;
+    }
+
+    .bestseller{
+        margin-top: 40px;
+    }
+
+    .book_display2 {
+        padding:0px;
+
+    }
+
+    .autor_category {
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .book_content1 {
+        padding: 1px;
+
+    }
+
+    .new_ones {
+        border-top: 0px;
+    }
+
+    .contact-btn {
+        width: 100%;
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        background: red;
+        border-radius: 3px;
+        display: block;
+        text-align: center;
+        border: 0px;
+        color: #647273;
+        background: #F4F4F4;
+    }
+
+    .regiser-btn {
+        width: 100%;
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 5px;
+        background: red;
+        border-radius: 3px;
+        display: block;
+        text-align: center;
+        border: 0px;
+        color: #647273;
+        background: #E4E4E4;
+    }
+
+    .login-btn {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 5px;
+        padding-left: 40px;
+        padding-right: 40px;
+        background: red;
+        border-radius: 3px;
+        display: block;
+        text-align: center;
+        border: 0px;
+        color: #fff;
+        background: #D70051;
+        transition: all 0.3s ease 0s;
+    }
 
     h1 {
         font-family: "Bebas";
         color: #4C4C4C;
         font-size: 35px;
         background: #fff;
-        margin-top: -25px;
+        margin-top: 10px;
         text-align: center;
         margin-left:0px;
         margin-right:0px;
@@ -853,9 +1000,17 @@ body {
         border: 1px solid #DEDEDE;
         margin-bottom: 5px;
         margin-right: 5px;
+        margin: 3px;
         height: 120px;
         float: left;
-        z-index: 1234;
+        z-index: 1000;
+        position: relative;
+    }
+    
+    .small_cover {
+        height: 60px;
+        margin-bottom:0px;
+        padding: 1px;
     }
 
     .main_box_head {
@@ -869,6 +1024,8 @@ body {
         height: auto;
         width: 100%;
         z-index: 1024;
+        font-size:12px;
+
     }
     .navbar-vertical-left,
     .navbar-vertical-left ul.navbar-nav {
@@ -894,6 +1051,13 @@ body {
     }
     .navbar-vertical-left ul.navbar-nav > li > a > span {
         display: inline-block;
+        font-size:11px;
+    }
+    body.modal-open,
+    .modal-open .navbar-fixed-top,
+    .modal-open .navbar-fixed-bottom {
+        margin-right: 0px;
+        margin-left: 17px;
     }
 }
 input[type=text]:focus , input[type=email]:focus , input[type="password"]:focus , textarea:focus {
