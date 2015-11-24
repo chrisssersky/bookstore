@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 23 Lis 2015, 17:04
+-- Generation Time: 24 Lis 2015, 11:00
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -16,7 +16,9 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
-
+--
+-- Database: `bookstore`
+--
 
 -- --------------------------------------------------------
 
@@ -79,7 +81,7 @@ INSERT INTO `book` (`book_id`, `title`, `description`, `create_date`, `price`, `
 (4, 'I wciąż ją kocham', 'John Tyree dokonuje wyboru - nie widząc szans na zdobycie wyższego wykształcenia, po ukończeniu szkoły średniej zaciąga się do armii. Przechodzi szkołę prawdziwego, męskiego życia, nabiera pewności siebie, której dotąd mu brakowało. W czasie przepustki spotyka Savannah – dziewczynę swoich marzeń. Młodszą o dwa lata studentkę pedagogiki, wolontariuszkę, która z grupą przyjaciół, w ramach akcji dobroczynnej, buduje domu dla ubogich. Na przekór wszelkich okolicznościom, pomiędzy obojgiem rozkwita miłość. Savannah przyrzeka czekać na ukochanego, dopóki nie minie okres jego służby...', 2006, 38.2, '2015-10-17 19:12:10', 3),
 (5, 'Dla Ciebie wszystko', 'Dawson Cole i Amanda Collier. Chłopak z dołów społecznych, wychowany w rodzinie uchodzącej za najgorszą, najbardziej mściwą, najbardziej niebezpieczną w całym hrabstwie Pamlico: złodziei, dilerów narkotyków, sutenerów i pijaków ze skłonnościami do przemocy. I dziewczyna z przeciwnego bieguna społecznego, pragnąca zostać nauczycielką. Różnice pochodzenia, wychowanie, wreszcie nieprzychylni ludzie sprawiły, że tych dwoje nie mogło być razem, choć oboje bardzo tego pragnęli. Dawson, który w młodości niechcący zabił człowieka, nigdy się z tym nie po-godził. Żyje samotnie, pracując na platformach wiertniczych i pokutując za dawne winy. Amanda, mimo że wyszła za mąż i urodziła dzieci, czuje się nie-szczęśliwa. Po latach dawni kochankowie spotykają się w rodzinnym miasteczku z okazji pogrzebu starego przyjaciela. Stłamszone przed laty uczucie powraca – ale czy uda im się odnaleźć szczęście na przekór całemu światu? Przeszłość i związane z nią konflikty odzywają się ze zdwojoną siłą...', 2011, 65.35, '2015-10-17 09:24:31', 1),
 (6, 'Dziewczyna z pociągu', 'Najszybciej sprzedający się debiut dla doroslych w historii brytyjskiego rynku. Co 6 sekund ktoś w Stanach Zjednoczonych kupuję tę książkę.\r\nMiliony egzemplarzy sprzedanych na całym świecie.\r\nRachel każdego ranka dojeżdża do pracy tym samym pociągiem. Wie, że pociąg zawsze zatrzymuje się przed tym samym semaforem, dokładnie naprzeciwko szeregu domów. Zaczyna się jej nawet wydawać, że zna ludzi, którzy mieszkają w jednym z nich. Uważa, że prowadzą doskonałe życie. Gdyby tylko mogła być tak szczęśliwa jak oni. I nagle widzi coś wstrząsającego. Widzi tylko przez chwilę, bo pociąg rusza, ale to wystarcza.\r\nWszystko się zmienia. Rachel ma teraz okazję stać się częścią życia ludzi, których widywała jedynie z daleka. Teraz przekonają się, że jest kimś więcej niż tylko dziewczyną z pociągu.', 2015, 27.99, '2015-10-19 14:45:30', 3.375),
-(7, 'Sędzia', 'Dziennikarz Kuba Zimny pisze artykuł o Adamie Bonarze, właścicielu świetnie prosperującej firmy leasingowej, nagle pomówionym o oszukanie inwestorów na sumę 300 mln złotych. Bonar rozumie, że padł ofiarą manipulacji zmierzających do przejęcia jego firmy, i rozpoczyna niebezpieczną akcję odwetową, w której będzie się musiał zmierzyć z dwoma bardzo silnymi przeciwnikami: Księżnym, byłym funkcjonariuszem SB, a obecnie prezesem banku, i bezwzględnym sędzią Foglem. Bonara czeka wiele kłopotów, a czytelnika – lawina dramatycznych zdarzeń, z dwoma morderstwami włącznie.\r\n„Sędzia” to trzymający w napięciu thriller prawniczy, demaskujący powiązania między politykami, finansistami i cynicznymi prawnikami, którzy zapewniają przestępcom niekaralność i swobodę działania. Mariusz Zielke kolejny raz zdziera obnaża prawdziwe oblicze świata finansjery i kreśli prawdziwe oblicze świata, w którym prawo jest dla bogatych, a nie dla biednych.', 2015, 35.99, '2015-10-19 13:49:49', 2),
+(7, 'Sędzia', 'Dziennikarz Kuba Zimny pisze artykuł o Adamie Bonarze, właścicielu świetnie prosperującej firmy leasingowej, nagle pomówionym o oszukanie inwestorów na sumę 300 mln złotych. Bonar rozumie, że padł ofiarą manipulacji zmierzających do przejęcia jego firmy, i rozpoczyna niebezpieczną akcję odwetową, w której będzie się musiał zmierzyć z dwoma bardzo silnymi przeciwnikami: Księżnym, byłym funkcjonariuszem SB, a obecnie prezesem banku, i bezwzględnym sędzią Foglem. Bonara czeka wiele kłopotów, a czytelnika – lawina dramatycznych zdarzeń, z dwoma morderstwami włącznie.\r\n„Sędzia” to trzymający w napięciu thriller prawniczy, demaskujący powiązania między politykami, finansistami i cynicznymi prawnikami, którzy zapewniają przestępcom niekaralność i swobodę działania. Mariusz Zielke kolejny raz zdziera obnaża prawdziwe oblicze świata finansjery i kreśli prawdziwe oblicze świata, w którym prawo jest dla bogatych, a nie dla biednych.', 2015, 35.99, '2015-10-19 13:49:49', 3.5),
 (8, 'Worek Kości', 'W wieku trzydziestu sześciu lat popularny pisarz, Michael Noonan, traci ukochaną żonę Johannę (Jo), która umiera nagle na parkingu centrum handlowego. Tuż przed śmiercią Jo kupiła domowy test ciążowy, ale Michael nie wiedział, że podejrzewa u siebie ciążę choć oboje długo czekali na dziecko. Gdyby urodziła się im dziewczynka, miała otrzymać imię Kia. Rzeczywiście, Jo była w ciąży, a płód był płci żeńskiej. Jednocześnie Noonan doznaje pisarskiej blokady. Po czterech latach, gnębiony koszmarami, decyduje się stawić im czoła.', 2015, 45.99, '2015-10-19 23:25:00', 4.65),
 (9, 'Doktor Sen ', 'Niewielka grupa staruszków nazywająca się Prawdziwym Węzłem przemierza autostrady Ameryki swoimi samochodami turystycznymi w poszukiwaniu pożywienia. Na pierwszy rzut oka są całkowicie nieszkodliwi, w końcu to tylko emeryci odziani w poliester. Dwunastoletnia Abra Stone jednak wkrótce się przekona, że Prawdziwy Węzeł to prawie nieśmiertelne istoty, żywiące się substancją wytwarzaną przez poddane śmiertelnym torturom dzieci, obdarzone tym samym darem co Dan Torrance. \r\n\r\nNękany przez mieszkańców hotelu Panorama, w którym jako dziecko spędził jedną straszliwą zimę, Dan przez dziesięciolecia błąka się po Ameryce. Ostatecznie osiada w małym miasteczku w New Hampshire, lecząc swoje uzależnienie od alkoholu we wspierającej go grupie Anonimowych Alkoholików. Większość czasu spędza w domu opieki, gdzie zachowana z lat dzieciństwa resztka mocy pozwala mu nieść ulgę umierającym w ostatnich chwilach ich życia. Staje się tam znany jako „Doktor Sen”. Kiedy Dan poznaje Abrę Stone, jej nadzwyczajny dar budzi drzemiące w nim demony i każe mu stanąć do boju o jej duszę i przetrwanie.', 2013, 29.99, '2015-10-19 18:41:39', 0),
 (10, 'Czarna bezgwiezdna noc', 'Zbiór 4 minipowieści mistrza grozy, które ujawniają jedną wspólną tajemnicę – ciemną stronę każdego z nas. Niezwykłe opowiadania, połączone tematem kary, zostały wzbogacone posłowiem Kinga, w którym autor opisuje inspiracje do powstania każdego z nich. "Wierzę w to, że w każdym człowieku jest drugi człowiek, obcy..." napisał Wilfred Leland James, bohater pierwszego opowiadania, zatytułowanego „1922”. Kolejne : „Wielki kierowca”, „Dobry interes” i „Dobre małżeństwo” udowadniają, że prawdziwy horror tworzymy sami sobie. Stephen King kolejny raz dowodzi, że jest mistrzem mrocznych historii i długich opowiadań.', 2015, 45.35, '2015-10-19 13:36:00', 3.9375),
@@ -88,12 +90,12 @@ INSERT INTO `book` (`book_id`, `title`, `description`, `create_date`, `price`, `
 (13, 'Stan zagrożenia', 'Mordercza rywalizacja supermocarstw odeszła w zapomnienie, a Stany Zjednoczone stanęły w obliczu nowego zagrożenia - ekspansji karteli narkotykowych. Jack Ryan tym razem zamieszany jest w nie do końca legalną akcję elitarnej Armii USA, która ma za zadanie zniszczenie mafii narkotykowych na terenie Kolumbii.', 2003, 34.99, '2015-10-21 13:32:39', 0),
 (14, 'Psychologia i życie', 'Znany na całym świecie, przetłumaczony na wiele języków obcych podręcznik prezentuje wiedzę z całego zakresu psychologii, dostarczając narzędzi do krytycznej oceny wiarygodności wyników badań.', 2012, 97.45, '2015-11-09 16:26:31', 0),
 (15, 'Słownik dobrego stylu', '... czyli wyrazy które się lubią. Słownik dobrego stylu obejmuje 5000 haseł i wskazuje, z jakim słowem połączyć dane słowo, podpowiada, jak najlepiej przekazać daną treść, uczy wyrażać się zgrabnie i naturalnie.', 2014, 30.45, '2015-11-09 13:41:00', 2.5),
-(16, 'Metro 2033', 'Nowe wydanie pierwszego tomu fantastyczno-naukowego cyklu "Metro" Dmitrija Glukhovsky’ego – "Metro 2033". Rok 2033. Świat po zagładzie nuklearnej. Ocalali walczą o przetrwanie w sieci moskiewskiego metra. Ich los trafia w ręce młodego Artema. W związku z polską premierą niezwykle wyczekiwanej powieści "Metro 2035", zamykającej cykl "Metro", całość trylogii otrzymała nową artystyczną szatę graficzną, stworzoną przez znanego rosyjskiego ilustratora, Iliję Jackiewicza, twórcę okładek takich książek jak "FUTU.RE" (Glukhovsky), "Łzy Diabła" (Magdalena Kozak), "Szczury Wrocławia" (Robert J. Szmidt), a także wszystkich tomów serii "Uniwersum Metro 2033", w tym "Dzielnicy obiecanej" (Paweł Majka) i "Otchłani" (Robert J. Szmidt). Nowe wydania wzbogacone są również o ilustracje, które doskonale oddają postapokaliptyczny klimat.', 2015, 99.99, '2015-11-09 14:36:34', 3.75),
+(16, 'Metro 2033', 'Nowe wydanie pierwszego tomu fantastyczno-naukowego cyklu "Metro" Dmitrija Glukhovsky’ego – "Metro 2033". Rok 2033. Świat po zagładzie nuklearnej. Ocalali walczą o przetrwanie w sieci moskiewskiego metra. Ich los trafia w ręce młodego Artema. W związku z polską premierą niezwykle wyczekiwanej powieści "Metro 2035", zamykającej cykl "Metro", całość trylogii otrzymała nową artystyczną szatę graficzną, stworzoną przez znanego rosyjskiego ilustratora, Iliję Jackiewicza, twórcę okładek takich książek jak "FUTU.RE" (Glukhovsky), "Łzy Diabła" (Magdalena Kozak), "Szczury Wrocławia" (Robert J. Szmidt), a także wszystkich tomów serii "Uniwersum Metro 2033", w tym "Dzielnicy obiecanej" (Paweł Majka) i "Otchłani" (Robert J. Szmidt). Nowe wydania wzbogacone są również o ilustracje, które doskonale oddają postapokaliptyczny klimat.', 2015, 99.99, '2015-11-09 14:36:34', 4.375),
 (17, 'Futu.re', 'Pokonaliśmy śmierć. I co dalej?\r\nOdkrycia naukowe poprzedniego pokolenia zapewniły mojemu nieśmiertelność i wieczną młodość.\r\nZiemię zaludniają piękne, tryskające zdrowiem i nieznające śmierci istoty.\r\nLecz każda utopia ma swoje cienie. Tak… Ktoś musi to robić – czuwać, by ów nowy wspaniały świat nie runął pod ciężarem przeludnienia, dbać, by jego kruchej równowagi nie zniszczyły zwierzęce instynkty człowieka. Ktoś musi troszczyć się o to, by ludzie żyli tak, jak przystoi nieśmiertelnym.\r\nTym kimś jestem ja.', 2015, 56.39, '2015-11-09 19:31:33', 4),
 (18, 'Mój agent Masa', 'Poznaliście wersję Masy, teraz poznacie prawdę ... Jeden z najsłynniejszych polskich gliniarzy Piotr Wróbel w rozmowie z Piotrem Pytlakowskim opowiada jak pozyskał najcenniejszego agenta w świecie gangsterskim, Jarosława Sokołowskiego ps. Masa i tłumaczy, dlaczego jego informator nigdy nie powinien dostać statusu świadka koronnego. To historia o Masie, który donosił na kumpli, ale też o innym gangsterze, który doniósł na Masę.', 2015, 45.89, '2015-11-09 10:28:28', 0),
 (19, 'Więcej krwi', 'Jon ucieka przed zemstą Rybaka, najważniejszego gangstera w Oslo, którego zdradził. Kieruje się na daleką północ Norwegii i ukrywa się w leśnej czatowni, gdzie pomaga mu tylko Lea, samotna matka i jej syn, Knut. Słońce północy, które nigdy nie zachodzi, powoli doprowadza mężczyznę do obłędu, a ludzie Rybaka są coraz bliżej...', 2015, 25.99, '2015-11-09 07:20:26', 0),
 (20, 'Krew na śniegu ', 'Lata 70., Oslo. Olav Johanssen to płatny zabójca, który pracuje dla najbardziej wpływowego gangstera w mieście. Otrzymuje nietypowe zlecenie - ma zabić żonę swojego szefa. Nie wypełnia jednak należycie swojego zadania...', 2014, 24.99, '2015-11-09 15:30:39', 4.5),
-(21, 'Łowcy głów', 'Roger Brown uważa się za najlepszego i zarazem najbardziej niedocenianego łowcę głów w Norwegii. Ma zbyt piękną żonę i zbyt drogą willę, dlatego zbyt często musi kraść dzieła sztuki. Kiedy poznaje Clasa Greve, szczęśliwego posiadacza bezcennego obrazu Rubensa, postanawia wykorzystać szansę i zrobić decydujący krok w stronę finansowej niezależności…\r\nAkcja powieści toczy się w świecie finansowej elity i w przestępczym podziemiu. Morderstwa, spektakularne pościgi i oszałamiające tempo zdarzeń. Polowanie na głowy trwa…', 2012, 45.99, '2015-11-09 07:26:27', 3),
+(21, 'Łowcy głów', 'Roger Brown uważa się za najlepszego i zarazem najbardziej niedocenianego łowcę głów w Norwegii. Ma zbyt piękną żonę i zbyt drogą willę, dlatego zbyt często musi kraść dzieła sztuki. Kiedy poznaje Clasa Greve, szczęśliwego posiadacza bezcennego obrazu Rubensa, postanawia wykorzystać szansę i zrobić decydujący krok w stronę finansowej niezależności…\r\nAkcja powieści toczy się w świecie finansowej elity i w przestępczym podziemiu. Morderstwa, spektakularne pościgi i oszałamiające tempo zdarzeń. Polowanie na głowy trwa…', 2012, 45.99, '2015-11-09 07:26:27', 4.5),
 (22, 'Karaluchy', 'W domu publicznym w stolicy Tajlandii znaleziono ciało zamordowanego norweskiego ambasadora. W Oslo pospiesznie tworzony jest plan uniknięcia skandalu. Policjant Harry Hole wsiada do samolotu skacowany, z zastrzykami witaminy B12 w walizce i wkrótce zaczyna krążyć po zaułkach Bangkoku – wśród świątyń, palarni opium, dziecięcych prostytutek i barów go-go. Odkrywa, że w tej sprawie chodzi o coś więcej niż o morderstwo: za ścianami pełza coś, co nie znosi światła dziennego...\r\n', 2011, 35.86, '2015-11-09 06:13:16', 1);
 
 -- --------------------------------------------------------
@@ -193,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `book_comment` (
   `book_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `comment` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
-  `time` datetime,
+  `time` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`comment_id`),
   KEY `book_comment_fk` (`book_id`),
   KEY `book_comment_user_fk` (`user_id`)
@@ -208,7 +210,9 @@ INSERT INTO `book_comment` (`comment_id`, `book_id`, `user_id`, `comment`, `time
 (2, 7, 2, 'The HTTP protocol is based on a request/response pattern, which means that the server cannot push any data to the client (i.e., the server can only provide data to the client in response to a client request). Long polling is a web application development pattern used to emulate pushing data from server to client. When the long polling pattern is used, the client submits a request to the server and the connection then remains active until the server is ready to send data to the client. The connection is closed only after data is sent back to the client or connection timeout occurs. The client then creates a new request when the connection is closed, thus restarting the loop.', '2015-11-18 19:11:20'),
 (3, 1, 1, 'Fowles tak niesamowicie tworzy trudne charaktery i stawia ich w sytuacji, która byłaby naturalna dla nas, zwykłych ludzi, dopiero wtedy, gdyby pewne postawy moralne i normy społeczne uległy w jakimś stopniu zniekształceniu. Sprawia, że bohatera, którego powinniśmy wewnętrznie karcić, pouczać, usprawiedliwiamy, czując dla niego pewną dozę współczucia, a może nawet sympatii. W słowach Fowlesa tytułowy kolekcjoner, który niewątpliwie żyje w zakrzywionej rzeczywistości staje się kimś, do kogo nie żywi się urazy, a raczej fascynuje jego postąpieniami, jego myślami, jego schematem działania.\r\nPowieść wprawia w drganie tę delikatną u wielu ludzi strunę moralności. Zaczynasz zastanawiać się, gdzie tak naprawdę istnieje granica pomiędzy postępowaniem dobrym i złym oraz kto ją określa', '2015-11-19 13:25:58'),
 (4, 1, 2, 'dsfsdfsdf', '2015-11-22 18:34:21'),
-(5, 1, 3, 'sdfsdf', '2015-11-22 23:58:44');
+(5, 1, 3, 'sdfsdf', '2015-11-22 23:58:44'),
+(6, 7, 3, 'Hej. Jest spoko!', '2015-11-23 20:03:10'),
+(7, 16, 2, 'fdfgfdgfdsg', '2015-11-24 10:53:17');
 
 -- --------------------------------------------------------
 
@@ -265,7 +269,8 @@ CREATE TABLE IF NOT EXISTS `final_purchase` (
 INSERT INTO `final_purchase` (`final_purchase_id`, `user_id`, `purchase_status_id`) VALUES
 (1, 3, 1),
 (2, 2, 1),
-(3, 2, 1);
+(3, 2, 1),
+(4, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -288,9 +293,10 @@ CREATE TABLE IF NOT EXISTS `final_purchase_item` (
 --
 
 INSERT INTO `final_purchase_item` (`final_purchase_item_id`, `book_id`, `final_purchase_id`, `quantity`) VALUES
-(1, 1, 1, 1),
-(2, 1, 2, 1),
-(3, 14, 3, 1);
+(1, 7, 1, 1),
+(2, 18, 2, 1),
+(3, 16, 3, 1),
+(4, 1, 4, 1);
 
 -- --------------------------------------------------------
 
