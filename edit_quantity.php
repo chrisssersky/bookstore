@@ -12,7 +12,7 @@ if (!empty($_POST)) {
             $purchase_id = $split_data[1];
             $field_name = $split_data[0];
             if (!empty($purchase_id) && !empty($field_name) && !empty($val)) {
-                mysql_query("UPDATE `purchase_item` SET `quantity`='$val' WHERE `purchase_id`='$purchase_id'") or mysql_error();
+                mysql_query("UPDATE `purchase_item` SET `$field_name`='$val' WHERE `purchase_id`='$purchase_id'") or mysql_error();
                 echo mysql_error();
                 echo '<i class="fa fa-check-square"></i>';
             } else {
